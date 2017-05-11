@@ -36,7 +36,7 @@ public class Main {
             posicaoAnterior = posicaoAtual;
         }
         
-        // escreve saída
+        // escrever saída
         System.out.println(tempo);
     }
     
