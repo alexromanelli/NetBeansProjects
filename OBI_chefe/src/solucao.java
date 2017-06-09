@@ -11,16 +11,11 @@ import java.io.InputStreamReader;
  *
  * @author Alexandre Romanelli <alexandre.romanelli@ifes.edu.br>
  */
-public class chefe {
+public class solucao {
     
+    private static int[] ref; // outra opção?
+
     /**
-     * (A implementar:)
-     * Ideia para tentar acelerar a execução do programa: usar uma matriz
-     * com n linhas e n+1 colunas, com uma linha para cada vértice i do grafo
-     * e, para cada linha, a primeira coluna representa o total t[i] de vértices
-     * adjacentes, e as próximas t[i] colunas contêm os números dos vértices
-     * adjacentes. As colunas restantes são desprezadas.
-     * 
      * @param args the command line arguments
      * @throws java.io.IOException
      */
@@ -36,6 +31,8 @@ public class chefe {
         for (int ind = 0; ind < n; ind++) {
             idades[ind] = Integer.parseInt(idadesString[ind]);
         }
+        
+        ref = new int[n];
         
         boolean[][] gerenciado = new boolean[n][n];
         for (int g = 0; g < m; g++) {
